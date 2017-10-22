@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Fallen Somalia</title>
+		<script>
+			function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+		</script>
+		<style type="text/css">
+			body, html {
+				height: 100%;
+				margin: 0;
+				background-color: #CDC57D;
+			}
+
+			.header_img {
+				height: 60%;
+    			background:url(black_hawk.jpg);
+    			background-repeat: no-repeat;
+    			background-position: center;
+    			background-size: cover;
+			}
+
+			div.tab {
+				background-color: #838066;
+				position: absolute;
+				width: 300px;
+				height: 200px;
+				z-index: 15;
+				top: 50%;
+				left: 50%;
+				margin: -100px 0 0 -150px;
+			}
+
+			div.tab button {
+				font-family: "Lucida Console", Monospace;
+				font-weight: bold;
+				font-size: 100%;
+				font-color: black;
+    			display: block;
+				background-color: inherit;
+				padding: 50px 100px;
+    			outline: none;
+    			cursor: pointer;
+    			transition: 0.3s;
+    			border: none;
+			}
+
+			div.tab button:hover {
+				background-color: #ddd;
+			}
+
+			div.tab button.active {
+				background-color: #ccc;
+			}
+
+			.tabcontent {
+				font-family: "Lucida Console", Monospace;
+    			display: none;
+    			padding: 0px 12px;
+    			/*border: 1px solid #ccc;*/
+    			width: 70%;
+    			border: none;
+    			height: 300px;
+			}
+
+/*
+			#header {
+				overflow: hidden;
+				background-color: #838066;
+				.header-inner {
+					margin: 0;
+					height: 4em;
+					.navbar {
+						.logo {
+							margin: 1em 0;
+							position: absolute;
+							text-align: center;
+						}
+						.menu {
+							text-align: center;
+							margin-top: 2em;
+							ul {
+								list-style-type: none;
+								li {
+									display: inline;
+									padding: 0 .35em;
+								}
+							}
+						}
+					}
+				}
+			}
+*/
+		</style> 
+	</head>
+	<body>
+		<div class="header_img"></div>
+		<div id="tab">
+			<button class="tablinks" onclick="openCity(event, 'Prelude')">Prelude</button>
+			<button class="tablinks" onclick="openCity(event, 'Policy')">Policy</button>
+
+			<img src="black_hawk_icon.png" width="20%" height="20%" alt="bh" />
+
+			<button class="tablinks" onclick="openCity(event, 'Misconceptions')">Misconceptions</button>
+			<button class="tablinks" onclick="openCity(event, 'Failures')">Failures</button>
+		</div>
+		<div id="Prelude" class="tabcontent">
+			<h2>Prelude</h2>
+			<p>This is the prelude tab.</p>
+		</div>
+
+		<div id="Policy" class="tabcontent">
+			<h2>Policy</h2>
+			<p>This is the policy tab.</p>
+		</div>
+
+		<div id="Misconceptions" class="tabcontent">
+			<h2>Misconceptions</h2>
+			<p>This is the misconceptions tab.</p>
+		</div>
+		<div id="Failures" class="tabcontent">
+			<h2>Failures</h2>
+			<p>This is the failures tab.</p>
+		</div>
+		<!--
+		<div id="header">
+			<div class="header-inner">
+				<div class="navbar">
+					<div class="logo">
+						<img src="black_hawk_icon.png" />
+					</div>
+					<div class="menu">
+						<ul class="menu">
+							<li class="tab1"><a title="" href="/prelude">Prelude</a></li>
+							<li class="tab2"><a title="" href="/policy">Policy</a></li>
+							<li class="tab3"><a title="" href="/misconceptions">Misconceptions</a></li>
+							<li class="tab4"><a title="" href="/failures">Failures</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		-->
+	</body>
+</html> 
